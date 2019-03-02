@@ -13,7 +13,7 @@ function LandingPage () {
             </div>
             <div className="title">
             <div>Hidden Locales</div> 
-            <p>lasjdflsadfjlasjdflsajfl;asjf;lasjfdsafd</p>
+            <p>Discover Your City's Best Kept Secret</p>
             <div className="landingWrapper">
          
             <button id="start">Start</button>
