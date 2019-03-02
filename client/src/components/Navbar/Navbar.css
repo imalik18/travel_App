@@ -1,0 +1,14 @@
+.nav {
+    height: 50px;
+    background-color: #d48166;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 30px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+a {
+    color:white;
+    margin: 10px;
+}

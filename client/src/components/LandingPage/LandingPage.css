@@ -1,0 +1,43 @@
+.pic {
+    width: 70%;
+    background-repeat: no-repeat;
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.background {
+    background-color: #e6e2dd;
+    display:flex;
+}
+
+.title {
+    color: #d48166;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 50px;
+ 
+    display: flex;
+    
+    flex-direction: column;
+   
+
+}
+
+#start {
+    height: 50px;
+    width: 100px;
+    font-size: 25px;
+
+
+}
+.landingWrapper {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title p {
+    font-size: 12px;
+}
