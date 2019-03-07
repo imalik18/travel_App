@@ -14,3 +14,4 @@ const localeSchema = new Schema({
 const locale = mongoose.model("locale", localeSchema);
 
 module.exports = locale;
+
