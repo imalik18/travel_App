@@ -1,3 +1,19 @@
-img {
-    width: auto;
+.imgdiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
+
+.imgdiv img {
+    width: 900px;
+    height: 700px;
+    object-fit: cover;
+   
+}
+
+.background {
+    background-color: #e6e2dd;
+    display:flex;
+}
+
