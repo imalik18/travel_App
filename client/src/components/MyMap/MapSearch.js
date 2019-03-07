@@ -63,7 +63,7 @@ const MapWithASearchBox = compose(
             })
         },
     })
-    
+
 )(props =>
     <GoogleMap
         ref={props.onMapMounted}

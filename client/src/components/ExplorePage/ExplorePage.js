@@ -3,8 +3,7 @@ import './ExplorePage.css';
 import Navbar from '../Navbar/Navbar';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
-import MyMap from '../MyMap/MyMap';
-import MapWithASearchBox from "../TestComponent/TestComponent"
+import MapWithASearchBox from "../MyMap/MapSearch"
 
 class ExplorePage extends React.Component {
     state = {
