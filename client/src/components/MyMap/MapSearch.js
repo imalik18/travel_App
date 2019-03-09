@@ -40,6 +40,7 @@ const MapWithASearchBox = compose(
                 },
                 onPlacesChanged: () => {
                     const places = refs.searchBox.getPlaces();
+                    console.log(places);
                     const bounds = new google.maps.LatLngBounds();
 
                     places.forEach(place => {
