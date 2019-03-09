@@ -3,7 +3,7 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 const mongoose = require("mongoose");
 const passport = require("passport");
-// const routes = require("./routes");
+const routes = require("./routes");
 
 const morgan = require("morgan");
 const cookieParser = require("cookie-parser");
@@ -28,6 +28,8 @@ app.use(session({ secret: "letsgoflyakite" }));
 app.use(passport.initialize());
 app.use(passport.session());
 
+// routes
+app.use(routes);
 require("./routes/api/userAuth")(app, passport);
 
 // serve static assets if in production
