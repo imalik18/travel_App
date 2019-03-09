@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
 	"name": "travelapp",
-=======
-	"name": "mern",
->>>>>>> ea7f5b070ede2bb913d7c4c225ce697609969622
 	"version": "1.0.0",
 	"description": "",
 	"main": "server.js",
@@ -25,10 +21,7 @@
 	},
 	"dependencies": {
 		"axios": "^0.18.0",
-<<<<<<< HEAD
-=======
 		"if-env": "^1.0.4",
->>>>>>> ea7f5b070ede2bb913d7c4c225ce697609969622
 		"bcrypt": "^3.0.4",
 		"bcrypt-nodejs": "^0.0.3",
 		"body-parser": "^1.18.3",
@@ -36,19 +29,11 @@
 		"cookie-parser": "^1.4.4",
 		"express": "^4.16.4",
 		"express-session": "^1.15.6",
-<<<<<<< HEAD
-		"if-env": "^1.0.4",
 		"mocha": "^6.0.2",
 		"mongoose": "^5.4.15",
 		"morgan": "^1.9.1",
 		"passport": "^0.4.0",
 		"passport-local": "^1.0.0",
 		"schema": "^0.2.1"
-=======
-		"mongoose": "^5.4.15",
-		"morgan": "^1.9.1",
-		"passport": "^0.4.0",
-		"passport-local": "^1.0.0"
->>>>>>> ea7f5b070ede2bb913d7c4c225ce697609969622
 	}
 }
