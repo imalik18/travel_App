@@ -29,8 +29,8 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // routes
-app.use(routes);
 require("./routes/api/userAuth")(app, passport);
+app.use(routes);
 
 // serve static assets if in production
 if (process.env.NODE_ENV === "production") {

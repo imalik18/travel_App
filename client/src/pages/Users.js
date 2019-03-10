@@ -1,42 +1,49 @@
 import React, { Component } from "react";
-import API from "../utils/API";
 import { connect } from "react-redux";
 import { verifyUser, logout } from "../actions/userActions";
+import SignUp from "../components/SignUp";
 
 class Users extends Component {
 	state = {
-		user: []
+		login: false
 	};
 
 	componentDidMount() {
-		this.loadUser();
+		// this.loadUser();
 	}
 
-	loadUser = () => {
-		API.getUsers().then(res =>
-			this.setState(prevState => ({
-				user: [...prevState.user, res.data]
-			}))
-		);
+	toggle = () => {
+		this.setState({
+			login: !this.state.login
+		});
+	};
+
+	test = () => {
+		if (this.state.login) {
+			return <SignUp />;
+		} else {
+			return <button onClick={this.toggle}>login</button>;
+		}
 	};
 
 	render() {
 		return (
-			<div>
-				{this.state.user.map(data => {
-					console.log(data);
-				})}
-				<p>Check Console for output</p>
+			<div className="m-5">
+				{this.props.user ? (
+					<button onClick={this.props.logout}>Logout</button>
+				) : (
+					<this.test />
+				)}
 			</div>
 		);
 	}
 }
 
 const mapStateToProps = state => ({
-	user: state.users.user
+	user: state.session.user.user
 });
 
 export default connect(
 	mapStateToProps,
-	{ varifyUser, Logout }
+	{ verifyUser, logout }
 )(Users);
