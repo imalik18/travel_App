@@ -11,6 +11,7 @@ const bodyParser = require("body-parser");
 const session = require("express-session");
 const path = require("path");
 
+//connect to mongdb
 mongoose
 	.connect(process.env.MONGODB_URI || "mongodb://localhost/travelappDB")
 	.then(() => console.log("MongoDB Connected"))
