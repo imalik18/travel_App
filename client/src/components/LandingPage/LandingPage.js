@@ -26,4 +26,6 @@ function LandingPage () {
 
 }
 
+//make it conditionally render the login or sign up component on the page depending on the button...
+
 export default LandingPage;

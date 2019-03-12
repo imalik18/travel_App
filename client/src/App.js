@@ -24,4 +24,9 @@ function App() {
 	);
 }
 
+//When you hit the button you load the login or sign up component on the page
+//Fix the front-end 
+
+
+
 export default App;
