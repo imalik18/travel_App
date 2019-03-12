@@ -1,3 +1,5 @@
 module.exports = {
-  locale: require("./locale")
+	Todo: require("./todo"),
+	User: require("./User"),
+	locale: require("./locale")
 };

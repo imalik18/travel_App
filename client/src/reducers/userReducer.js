@@ -34,6 +34,7 @@ export default function(state = initialState, action) {
 				user: action.payload
 			};
 		case LOGOUT:
+			window.location.reload(true);
 			return {
 				...state,
 				user: {}
