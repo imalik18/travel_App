@@ -4,6 +4,7 @@ import LandingPage from "./components/LandingPage/LandingPage";
 import ExplorePage from "./components/ExplorePage/ExplorePage";
 import SignUp from "./components/SignUp";
 import Login from "./components/Login";
+import Users from "./pages/Users";
 
 //redux componnets for user authentication
 import { Provider } from "react-redux";
@@ -18,6 +19,7 @@ function App() {
 					<Route exact path="/explore" component={ExplorePage} />
 					<Route exact path="/signup" component={SignUp} />
 					<Route exact path="/login" component={Login} />
+					<Route exact path="/users" component={Users} />
 				</div>
 			</Provider>
 		</Router>
