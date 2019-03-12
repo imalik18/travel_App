@@ -1,5 +1,12 @@
 import React, { Component } from "react";
-import { MDBContainer, MDBRow, MDBCol, MDBInput, MDBBtn } from "mdbreact";
+import {
+	MDBContainer,
+	MDBRow,
+	MDBCol,
+	MDBInput,
+	MDBBtn,
+	MDBCard
+} from "mdbreact";
 import { connect } from "react-redux";
 import { addUser } from "../actions/userActions";
 
@@ -33,36 +40,38 @@ class SignUp extends Component {
 			<MDBContainer>
 				<MDBRow>
 					<MDBCol md="6">
-						<form onSubmit={this.onSubmit}>
-							<p className="h5 text-center mb-4">Sign in</p>
-							<div className="grey-text">
-								<MDBInput
-									label="Username"
-									icon="envelope"
-									group
-									type="text"
-									validate
-									error="wrong"
-									success="right"
-									name="userName"
-									onChange={this.onChange}
-									value={this.state.userName}
-								/>
-								<MDBInput
-									label="Type your password"
-									icon="lock"
-									group
-									type="password"
-									validate
-									name="password"
-									onChange={this.onChange}
-									value={this.state.password}
-								/>
-							</div>
-							<div className="text-center">
-								<button>SIGNUP</button>
-							</div>
-						</form>
+						<MDBCard className="p-4">
+							<form onSubmit={this.onSubmit}>
+								<p className="h5 text-center mb-4">Sign in</p>
+								<div className="grey-text">
+									<MDBInput
+										label="Username"
+										icon="user"
+										group
+										type="text"
+										validate
+										error="wrong"
+										success="right"
+										name="userName"
+										onChange={this.onChange}
+										value={this.state.userName}
+									/>
+									<MDBInput
+										label="Type your password"
+										icon="lock"
+										group
+										type="password"
+										validate
+										name="password"
+										onChange={this.onChange}
+										value={this.state.password}
+									/>
+								</div>
+								<div className="text-center">
+									<MDBBtn type="submit">SIGNUP</MDBBtn>
+								</div>
+							</form>
+						</MDBCard>
 					</MDBCol>
 				</MDBRow>
 			</MDBContainer>
