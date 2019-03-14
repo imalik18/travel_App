@@ -15,6 +15,7 @@ const placesSeed = [
     address: "New York, NY 10011",
     hours: "7:00am-7:00pm",
     phone: "(212) 500-6035",
+    img: "http://4.bp.blogspot.com/-xu5NL5mxyfk/UfeasyxUISI/AAAAAAAAcS8/y1un3J0H7z8/s1600/DSC_0343.JPG",
 
   },
   {
@@ -23,6 +24,7 @@ const placesSeed = [
     address: "State Road 707, Tequesta, FL 33469",
     hours: "9:00am-4:30pm",
     phone: "unavailable",
+    img: "http://farm3.static.flickr.com/2726/5711624414_50b4095abc.jpg",
 
   },
   {
