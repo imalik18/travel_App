@@ -12,8 +12,7 @@ class ExplorePage extends React.Component {
 		results: [],
 		carousel: [
 			{
-				img:
-					"http://4.bp.blogspot.com/-xu5NL5mxyfk/UfeasyxUISI/AAAAAAAAcS8/y1un3J0H7z8/s1600/DSC_0343.JPG",
+				img:"http://4.bp.blogspot.com/-xu5NL5mxyfk/UfeasyxUISI/AAAAAAAAcS8/y1un3J0H7z8/s1600/DSC_0343.JPG",
 				info: "New York High Line"
 			},
 			{
@@ -57,37 +56,37 @@ class ExplorePage extends React.Component {
 			}
 		]
 	};
-	handleChange = event => {
-		this.setState(
-			{
-				[event.target.name]: event.target.value
-			},
-			function() {
-				console.log(this.state);
-			}
-		);
-	};
+	// handleChange = event => {
+	// 	this.setState(
+	// 		{
+	// 			[event.target.name]: event.target.value
+	// 		},
+	// 		function() {
+	// 			console.log(this.state);
+	// 		}
+	// 	);
+	// };
 
-	handleSubmit = () => {
-		console.log(this.state.places);
-		// const key= 'AIzaSyB2Juo1rmvWjd1Yp1Qb016LglopIokJhwI';
-		// const query = 'https://maps.googleapis.com/maps/api/place/textsearch/json?query=' + this.state.places + '&key=' + key;
+	// handleSubmit = () => {
+	// 	console.log(this.state.places);
+	// 	// const key= 'AIzaSyB2Juo1rmvWjd1Yp1Qb016LglopIokJhwI';
+	// 	// const query = 'https://maps.googleapis.com/maps/api/place/textsearch/json?query=' + this.state.places + '&key=' + key;
 
-		// axios.get(query).then(result =>{
-		//     console.log(result);
+	// 	// axios.get(query).then(result =>{
+	// 	//     console.log(result);
 
-		// })
+	// 	// })
 
-		// var service = new google.maps.places.PlacesService(document.getElementById('map'));
-		// service.getDetails({
-		//     placeId: 'ChIJN1t_tDeuEmsRUsoyG83frY4'
-		// }, function (place, status) {
-		//     console.log('Place details:', place);
-		// });
-	};
-	handleSave = results => {
-		console.log(results, "This should be our place info");
-	};
+	// 	// var service = new google.maps.places.PlacesService(document.getElementById('map'));
+	// 	// service.getDetails({
+	// 	//     placeId: 'ChIJN1t_tDeuEmsRUsoyG83frY4'
+	// 	// }, function (place, status) {
+	// 	//     console.log('Place details:', place);
+	// 	// });
+	// };
+	// handleSave = results => {
+	// 	console.log(results, "This should be our place info");
+	// };
 
 	render() {
 		return (
@@ -114,15 +113,15 @@ class ExplorePage extends React.Component {
                     </div>
                 </Carousel> */}
 
-				<div className="background">
+				{/* <div className="background">
 					<input
 						name="places"
 						onChange={this.handleChange}
 						placeholder="Enter Place"
 					/>
 					<button onClick={this.handleSubmit}>submit</button>
-				</div>
-
+				</div> */}
+				
 				{/* <MyMap
                     isMarkerShown={true}
                     onMarkerClick={this.handleMarkerClick}

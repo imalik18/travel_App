@@ -2,6 +2,9 @@
 import React from "react";
 import { compose, withProps, lifecycle } from "recompose";
 import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps";
+import axios from 'axios';
+import API from "../../utils/API";
+
 
 const _ = require("lodash");
 
@@ -17,6 +20,7 @@ const MapWithASearchBox = compose(
     withScriptjs,
     withGoogleMap,
     lifecycle({
+        
         componentWillMount() {
             const refs = {}
 
@@ -38,9 +42,28 @@ const MapWithASearchBox = compose(
                 onSearchBoxMounted: ref => {
                     refs.searchBox = ref;
                 },
+                handleClick() {
+                    console.log("clicked");
+                    API.addPlace( {
+
+                        name: "test",
+                        ratings: 5,
+                        address: "test",
+                        hours: "test",
+                        phone: "test"
+
+                    }).then((res) => {
+                        console.log(res, "Place Saved")
+
+
+                    })
+
+                },
                 onPlacesChanged: () => {
                     const places = refs.searchBox.getPlaces();
                     console.log(places);
+                    //make axios call here to CRUD route
+                    
                     const bounds = new google.maps.LatLngBounds();
 
                     places.forEach(place => {
@@ -61,11 +84,14 @@ const MapWithASearchBox = compose(
                     });
                     // refs.map.fitBounds(bounds);
                 },
+
             })
         },
     })
 
 )(props =>
+    <div>
+        <button onClick={props.handleClick}>Add Places!</button> 
     <GoogleMap
         ref={props.onMapMounted}
         defaultZoom={15}
@@ -100,6 +126,7 @@ const MapWithASearchBox = compose(
             <Marker key={index} position={marker.position} />
         )}
     </GoogleMap>
+    </div>
 );
 
 export default MapWithASearchBox;

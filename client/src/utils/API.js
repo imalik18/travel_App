@@ -4,10 +4,18 @@ export default {
 	getUsers: function() {
 		return axios.get("/api/todo");
 	},
-	getUser: function(id) {
+	
+  getUser: function(id) {
 		return axios.get("/api/todo/" + id);
 	},
-	addNote: function(id, todoData) {
+
+	addPlace: function(placeData) {
+		return axios.post("/api/places", placeData);
+  },
+	
+  addNote: function(id, todoData) {
 		return axios.post("/api/todo/" + id, todoData);
+
 	}
 };
+
