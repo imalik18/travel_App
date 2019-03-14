@@ -2,38 +2,55 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { verifyUser, logout } from "../actions/userActions";
 import SignUp from "../components/SignUp";
+import API from "../utils/API";
 
 class Users extends Component {
 	state = {
-		login: false
+		title: "",
+		desc: ""
 	};
 
 	componentDidMount() {
 		// this.loadUser();
 	}
 
-	toggle = () => {
-		this.setState({
-			login: !this.state.login
-		});
+	onChange = event => {
+		this.setState({ [event.target.name]: event.target.value });
 	};
 
-	test = () => {
-		if (this.state.login) {
-			return <SignUp />;
-		} else {
-			return <button onClick={this.toggle}>login</button>;
-		}
+	handleFormSubmit = event => {
+		event.preventDefault();
+		// console.log(this.props.user._id);
+		API.addNote(this.props.user._id, {
+			title: this.state.title,
+			desc: this.state.desc
+		})
+			.then(res => {
+				// console.log(res.data);
+			})
+			.catch(err => console.log(err));
 	};
 
 	render() {
 		return (
 			<div className="m-5">
-				{this.props.user ? (
-					<button onClick={this.props.logout}>Logout</button>
-				) : (
-					<this.test />
-				)}
+				<form>
+					<input
+						name="title"
+						type="text"
+						placeholder="title"
+						onChange={this.onChange}
+					/>
+					<input
+						name="desc"
+						type="text"
+						placeholder="desc"
+						onChange={this.onChange}
+					/>
+					<button type="submit" onClick={this.handleFormSubmit}>
+						submit
+					</button>
+				</form>
 			</div>
 		);
 	}
