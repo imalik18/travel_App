@@ -5,4 +5,4 @@ const todoSchema = Schema({
 	activity: { type: String }
 });
 
-const Todo = mongoose.model("Todo", todoSchema);
+module.exports = Todo = mongoose.model("Todo", todoSchema);
