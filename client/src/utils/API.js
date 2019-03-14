@@ -6,5 +6,9 @@ export default {
 	},
 	getUser: function(id) {
 		return axios.get("/api/todo/" + id);
+	},
+	addPlace: function(placeData) {
+		return axios.post("/api/places", placeData);
 	}
 };
+
