@@ -12,7 +12,8 @@ class ExplorePage extends React.Component {
 		results: [],
 		carousel: [
 			{
-				img:"http://4.bp.blogspot.com/-xu5NL5mxyfk/UfeasyxUISI/AAAAAAAAcS8/y1un3J0H7z8/s1600/DSC_0343.JPG",
+				img:
+					"http://4.bp.blogspot.com/-xu5NL5mxyfk/UfeasyxUISI/AAAAAAAAcS8/y1un3J0H7z8/s1600/DSC_0343.JPG",
 				info: "New York High Line"
 			},
 			{
@@ -91,7 +92,7 @@ class ExplorePage extends React.Component {
 	render() {
 		return (
 			<div>
-				<Navbar profile={false} trips={false} locale={false} />
+				{/* <Navbar profile={false} trips={false} locale={false} /> */}
 
 				<Slides imgArray={this.state.carousel} />
 				{/* <Carousel infiniteLoop={true} autoPlay={true} dynamicHeight={true}>
@@ -121,7 +122,7 @@ class ExplorePage extends React.Component {
 					/>
 					<button onClick={this.handleSubmit}>submit</button>
 				</div> */}
-				
+
 				{/* <MyMap
                     isMarkerShown={true}
                     onMarkerClick={this.handleMarkerClick}

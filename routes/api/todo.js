@@ -5,7 +5,8 @@ router.route("/").get(todoController.findAll);
 
 router
 	.route("/:id")
-	.get(todoController.findById)
-	.post(todoController.create);
+	.get(todoController.populateTodo)
+	.post(todoController.create)
+	.delete(todoController.delete);
 
 module.exports = router;
