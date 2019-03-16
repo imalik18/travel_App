@@ -20,8 +20,7 @@ class ExplorePage extends React.Component {
 				info: "Blowing Rock Nature Preserve, Florida"
 			},
 			{
-				img:
-					"https://i.pinimg.com/originals/07/c1/4c/07c14ce46798e16f674997eb6084f948.jpg",
+				img: "https://i.pinimg.com/originals/07/c1/4c/07c14ce46798e16f674997eb6084f948.jpg",
 				info: "The Board Room, Washington DC"
 			},
 			{
@@ -53,7 +52,18 @@ class ExplorePage extends React.Component {
 				img:
 					"https://www.myutahparks.com/.image/t_share/MTQ4MzM1NjgyMjUyNzExNjY4/arches-delicate-arch-sky_adobe_680.jpg",
 				info: "Arches National Park, Utah"
+			},
+			{
+				img: "https://www.national-park.com/wp-content/uploads/2016/04/Welcome-to-Joshua-Tree-National-Park.jpg",
+		
+				info: "Joshua Tree National Park"
+			},
+			{
+				img:
+					"https://caltech.typepad.com/.a/6a0105349b8251970b01a5118dee2e970c-800wi",
+				info: "The Narrows at Zion National Park"
 			}
+
 		]
 	};
 	// handleChange = event => {
