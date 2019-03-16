@@ -39,7 +39,7 @@ class Login extends Component {
 		return (
 			<MDBContainer>
 				<MDBRow>
-					<MDBCol md="6">
+					<MDBCol>
 						<MDBCard className="p-4">
 							<form onSubmit={this.onSubmit}>
 								<p className="h5 text-center mb-4">Login</p>

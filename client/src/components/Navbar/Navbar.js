@@ -29,10 +29,10 @@ class Navbar extends Component {
 				<MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
 					<MDBNavbarNav right>
 						<MDBNavItem active={this.props.profile}>
-							<MDBNavLink to="#!">Profile</MDBNavLink>
+							<MDBNavLink to="/explore">Home</MDBNavLink>
 						</MDBNavItem>
 						<MDBNavItem active={this.props.trips}>
-							<MDBNavLink to="#!">Trips</MDBNavLink>
+							<MDBNavLink to="/trip">Trips</MDBNavLink>
 						</MDBNavItem>
 						<MDBNavItem active={this.props.locale}>
 							<MDBNavLink to="#!">Suggest Locale</MDBNavLink>

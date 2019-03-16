@@ -38,13 +38,13 @@ class Users extends Component {
 					<input
 						name="title"
 						type="text"
-						placeholder="title"
+						label="title"
 						onChange={this.onChange}
 					/>
 					<input
 						name="desc"
 						type="text"
-						placeholder="desc"
+						label="desc"
 						onChange={this.onChange}
 					/>
 					<button type="submit" onClick={this.handleFormSubmit}>
